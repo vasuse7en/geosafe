@@ -192,7 +192,7 @@
             if (data.length == 1) {
                 {# only for lone data#}
                 select_if(data[0]['id']);
-                show_info_text('InaSAFE Impact Function', 'Automatically select ' + data[0]['name']);
+                show_info_text('Impact Function', 'Automatically select ' + data[0]['name']);
             }
             else if (data.length == 0) {
                 {# deselect Impact function#}
@@ -307,7 +307,7 @@
                 hazard_exposure_rect_groups.clearLayers();
             }
 
-            show_info_text('InaSAFE Exposure', $a.text() + ' selected.');
+            show_info_text('Analysis Exposure', $a.text() + ' selected.');
         } else {
             remove_layer(exposure_layer._url);
             map.removeLayer(exposure_layer);
@@ -320,7 +320,7 @@
                 is_legend = false;
                 $(".legend").toggle(is_legend);
             }
-            show_info_text('InaSAFE Exposure', 'Exposure unselected.');
+            show_info_text('Analysis Exposure', 'Exposure unselected.');
         }
     }
 
@@ -393,7 +393,7 @@
                 hazard_exposure_rect_groups.clearLayers();
             }
 
-            show_info_text('InaSAFE Hazard', $a.text() + ' selected.');
+            show_info_text('Analysis Hazard', $a.text() + ' selected.');
         } else {
             remove_layer(hazard_layer._url);
             map.removeLayer(hazard_layer);
@@ -406,7 +406,7 @@
                 is_legend = false;
                 $(".legend").toggle(is_legend);
             }
-            show_info_text('InaSAFE Hazard', 'Hazard unselected.');
+            show_info_text('Analysis Hazard', 'Hazard unselected.');
         }
     }
 
@@ -461,7 +461,7 @@
                 map.removeLayer(impact_layer);
             }
             update_map(layer_id, 'impact');
-            show_info_text('InaSAFE Impact', $a.text() + ' selected.');
+            show_info_text('Impact', $a.text() + ' selected.');
         } else {
             remove_layer(impact_layer._url);
             map.removeLayer(impact_layer);
@@ -474,7 +474,7 @@
                 is_legend = false;
                 $(".legend").toggle(is_legend);
             }
-            show_info_text('InaSAFE Impact', 'Impact unselected.');
+            show_info_text('Impact', 'Impact unselected.');
         }
     }
 

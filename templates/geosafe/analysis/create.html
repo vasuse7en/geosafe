@@ -1,4 +1,4 @@
-{% extends 'geonode_base.html' %}
+{% extends 'fluentgrid_base.html' %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
 {% load i18n avatar_tags %}
@@ -411,7 +411,7 @@
                title="To Homepage"
                data-toggle="tooltip"
                data-placement="right">
-                <img src="{% static 'geosafe/img/logo-geonode.png' %}"
+                <img src="{% static 'geosafe/img/logo-infinity.png' %}"
                      href="{% url "home" %}"/>
             </a>
         </div>
@@ -460,6 +460,7 @@
         <div class="info-box text-center panel-body">
             <span class="info-title panel-title panel-heading"></span>
             <span class="info-text"></span>
+            <span class = "pull-right">Powered by <a href="https://inasafe.org" style="color:white;">InaSAFE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
         </div>
     </div>
 {% endblock %}
