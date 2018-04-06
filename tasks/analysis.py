@@ -161,7 +161,7 @@ def create_metadata_object(self, layer_id):
         using_direct_access = (
             hasattr(settings, 'INASAFE_LAYER_DIRECTORY') and
             settings.INASAFE_LAYER_DIRECTORY)
-        if using_direct_access and not layer.is_remote:
+        if using_direct_access and layer.remote_service is None:
             # If direct disk access were configured, then use it.
             base_file_path = get_layer_path(layer)
             base_file_path, _ = os.path.splitext(base_file_path)
